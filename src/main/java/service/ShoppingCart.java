@@ -1,4 +1,5 @@
 package service;
+
 import model.Food;
 
 public class ShoppingCart {
@@ -9,12 +10,12 @@ public class ShoppingCart {
         this.foods = foods;
     }
 
-
     public double AmountWithoutDiscount(Food[] foods) {
         double sum = 0;
 
         for (Food food : foods) {
             sum = sum + food.price;
+            //sum = sum + food.getPrice();
         }
         return sum;
     }
@@ -24,21 +25,19 @@ public class ShoppingCart {
 
         for (Food food : foods) {
             sum = sum + food.price;
-            //sum = sum + food.getPrice();
         }
 
-        return sum - sum*(discount/100);
+        return sum - sum * (discount / 100);
     }
 
-    private double AmountIsVegetarianWithoutDiscount(Food[] foods, boolean isVegetarian) {
+    public double AmountIsVegetarianWithoutDiscount(Food[] foods) {
         double sum = 0;
 
-        if (isVegetarian) {
+
             for (Food food : foods) {
+                if (food.isVegetarian)
                 sum = sum + food.price;
-             //   sum = sum + food.getPrice();
             }
-        }
         return sum;
     }
 }

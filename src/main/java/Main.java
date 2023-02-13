@@ -7,7 +7,7 @@ import java.lang.reflect.Member;
 
 public class Main {
 
-    public static void main (String[] args){
+    public static void main(String[] args) {
 
         Food meat = new Meat(5, 100);
         Food appleRed = new Apple(10, 50, "red");
@@ -17,15 +17,10 @@ public class Main {
 
         ShoppingCart shoppingCart = new ShoppingCart(foods);
 
-        shoppingCart.AmountWithoutDiscount(foods);
-        System.out.println(shoppingCart.AmountWithoutDiscount(foods));
+        System.out.println("Общая сумма товаров в корзине без скидки: " + shoppingCart.AmountWithoutDiscount(foods));
+        System.out.println("Общая всех вегетарианских продуктов товаров в корзине без скидки: " + shoppingCart.AmountIsVegetarianWithoutDiscount(foods));
 
     }
-
-
-
-
-
 
 
 }
