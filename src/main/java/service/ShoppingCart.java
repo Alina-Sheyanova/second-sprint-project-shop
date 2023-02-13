@@ -24,6 +24,7 @@ public class ShoppingCart {
 
         for (Food food : foods) {
             sum = sum + food.price;
+            //sum = sum + food.getPrice();
         }
 
         return sum - sum*(discount/100);
@@ -35,6 +36,7 @@ public class ShoppingCart {
         if (isVegetarian) {
             for (Food food : foods) {
                 sum = sum + food.price;
+             //   sum = sum + food.getPrice();
             }
         }
         return sum;
