@@ -22,7 +22,7 @@ public class Food implements Discountable{
     public int getAmount() {
         return amount;
     }
-
+    @Override
     public double getDiscount() {
         return 0;
     }
