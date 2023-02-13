@@ -1,5 +1,10 @@
 package model.constants;
 
-public class Discount {
-   
+import model.Discountable;
+
+public class Discount implements Discountable {
+    @Override
+    public double getDiscount() {
+        return 0;
+    }
 }
