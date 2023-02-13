@@ -14,19 +14,18 @@ public class ShoppingCart {
         double sum = 0;
 
         for (Food food : foods) {
-            sum = sum + food.getPrice();
+            sum = sum + food.getPrice() * food.getAmount();
         }
         return sum;
     }
 
-    private double AmountWithDiscount(Food[] foods, int discount) {
+    public double AmountWithDiscount(Food[] foods) {
         double sum = 0;
 
         for (Food food : foods) {
-            // sum = sum + food.price;
+            sum = sum + (food.getPrice() - food.getPrice() * (food.getDiscount() / 100)) * food.getAmount();
         }
-
-        return sum - sum * (discount / 100);
+        return sum;
     }
 
     public double AmountIsVegetarianWithoutDiscount(Food[] foods) {
@@ -35,7 +34,7 @@ public class ShoppingCart {
 
         for (Food food : foods) {
             if (food.isVegetarian())
-                sum = sum + food.getPrice();
+                sum = sum + food.getPrice() * food.getAmount();
         }
         return sum;
     }

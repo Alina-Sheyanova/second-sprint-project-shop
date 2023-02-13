@@ -1,14 +1,7 @@
 package model.constants;
 
-import model.Discountable;
+public class Colour {
+    public static final String RED = "red";
+    public static final String GREEN = "green";
 
-public class Colour implements Discountable {
-
-    public static final String colourRed = "red";
-    public static final String colourGreen = "green";
-
-    @Override
-    public double getDiscount() {
-        return 0;
-    }
 }

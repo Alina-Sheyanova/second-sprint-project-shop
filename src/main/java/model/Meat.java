@@ -3,10 +3,7 @@ package model;
 public class Meat extends Food {
 
     public Meat(int amount, double price) {
-        this.amount = amount;
-        this.price = price;
-        //this.setPrice(price);
-        isVegetarian = false;
+        super(amount, price, false);
     }
 
 }
