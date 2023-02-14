@@ -19,9 +19,9 @@ public class Main {
         ShoppingCart shoppingCart = new ShoppingCart(foods);
 
 
-        System.out.println("Общая сумма товаров в корзине без скидки: " + shoppingCart.AmountWithoutDiscount(foods) + " рублей");
-        System.out.println("Общая сумма товаров в корзине со скидкой: " + shoppingCart.AmountWithDiscount(foods) + " рублей");
-        System.out.println("Общая сумма всех вегатерианских продуктов в корзине без скидки: " + shoppingCart.AmountIsVegetarianWithoutDiscount(foods) + " рублей");
+        System.out.println("Общая сумма товаров в корзине без скидки: " + shoppingCart.amountWithoutDiscount(foods) + " рублей");
+        System.out.println("Общая сумма товаров в корзине со скидкой: " + shoppingCart.amountWithDiscount(foods) + " рублей");
+        System.out.println("Общая сумма всех вегатерианских продуктов в корзине без скидки: " + shoppingCart.amountIsVegetarianWithoutDiscount(foods) + " рублей");
 
     }
 
